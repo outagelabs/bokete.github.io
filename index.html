@@ -18,7 +18,7 @@
 ║   ██████╔╝╚██████╔╝██║  ██╗███████╗   ██║   ███████╗                        ║
 ║   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚══════╝   ╚═╝   ╚══════╝                        ║
 ║                                                                              ║
-║                     iOS Pothole Reporting & Navigation                       ║
+║              iOS Pothole Detection, Reporting & Navigation                   ║
 ║                                                                              ║
 ╚══════════════════════════════════════════════════════════════════════════════╝
         </pre>
@@ -47,10 +47,14 @@
         <h2>┌─ ABOUT ─────────────────────────────────────────────────────┐</h2>
         <div class="ascii-box">
             <p>
-                Bokete is an iOS application designed to help drivers report and navigate around
-                potholes with lane-specific precision. Using advanced location tracking and
-                OpenStreetMap integration, Bokete makes road hazard reporting more accurate
-                and useful than ever before.
+                Bokete is an intelligent iOS application that automatically detects potholes
+                using your phone's accelerometer while you drive. Combined with manual
+                lane-specific reporting, voice-guided interaction, and real-time lock screen
+                warnings, Bokete makes road hazard detection and navigation smarter than ever.
+            </p>
+            <p>
+                Available in English and Spanish with multiple interaction modes to suit your
+                driving style.
             </p>
         </div>
     </section>
@@ -58,18 +62,35 @@
     <section class="section">
         <h2>┌─ FEATURES ──────────────────────────────────────────────────┐</h2>
         <ul class="feature-list">
-            <li><strong>Lane-Specific Reporting</strong> - Report potholes with precise lane information using OpenStreetMap data</li>
-            <li><strong>Duplicate Detection</strong> - Intelligent system prevents duplicate reports within 5 meters using Haversine distance calculation</li>
-            <li><strong>3D Camera Modes</strong> - Dynamic viewing angles that adapt to your driving speed:
+            <li><strong>Automatic Pothole Detection</strong> - AI-powered accelerometer monitoring detects potholes as you drive:
                 <ul>
-                    <li>Normal mode: 500m altitude, 45° pitch</li>
-                    <li>Driving mode: 350m altitude, 55° pitch (auto-activated at >18 km/h)</li>
-                    <li>Navigation mode: 300m altitude, 60° pitch with heading-up orientation</li>
+                    <li>Real-time G-force analysis at 50Hz</li>
+                    <li>Adaptive thresholds based on vehicle type and phone mount position</li>
+                    <li>Smart false positive filtering (speed bumps, railroad crossings)</li>
+                    <li>Self-learning system adjusts sensitivity based on your feedback</li>
                 </ul>
             </li>
-            <li><strong>Real-Time Navigation</strong> - Navigate around reported potholes with live directions</li>
-            <li><strong>Smart Lane Detection</strong> - Automatically adapts UI based on available road data</li>
-            <li><strong>Age-Based Visualization</strong> - Color-coded markers show report freshness from red (new) to blue (7+ days)</li>
+            <li><strong>Voice-Guided Reporting</strong> - Hands-free operation for safer driving:
+                <ul>
+                    <li>Voice confirmation for detected potholes</li>
+                    <li>Speak lane numbers instead of tapping</li>
+                    <li>Voice cancellation during countdown</li>
+                    <li>Available in English and Spanish</li>
+                </ul>
+            </li>
+            <li><strong>Live Activities</strong> - Real-time warnings on your lock screen:
+                <ul>
+                    <li>Dynamic state display (awaiting, scanning, countdown, approaching)</li>
+                    <li>Distance and time-to-arrival calculations</li>
+                    <li>Works even when phone is locked</li>
+                    <li>Battery-saving auto-pause mode</li>
+                </ul>
+            </li>
+            <li><strong>Lane-Specific Reporting</strong> - Precise lane information using OpenStreetMap data</li>
+            <li><strong>Multi-Language Support</strong> - English and Spanish with formal/informal tones</li>
+            <li><strong>Intelligent Duplicate Detection</strong> - Prevents duplicate reports within 5 meters</li>
+            <li><strong>3D Camera Modes</strong> - Dynamic viewing angles that adapt to driving speed</li>
+            <li><strong>Age-Based Visualization</strong> - Color-coded markers from red (fresh) to blue (7+ days)</li>
         </ul>
     </section>
 
@@ -103,6 +124,10 @@
             <p>Bokete is built with cutting-edge iOS technologies:</p>
             <p>▸ Swift 6.0 with strict concurrency</p>
             <p>▸ SwiftUI for modern, responsive interface</p>
+            <p>▸ CoreMotion for accelerometer-based pothole detection</p>
+            <p>▸ ActivityKit for Live Activities on lock screen</p>
+            <p>▸ AVFoundation for text-to-speech and speech recognition</p>
+            <p>▸ StoreKit 2 for subscription management</p>
             <p>▸ GRDB for efficient local database</p>
             <p>▸ MapKit for advanced 3D mapping</p>
             <p>▸ CoreLocation for precise GPS tracking</p>

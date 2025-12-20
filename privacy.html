@@ -64,7 +64,29 @@
             <li>Accelerometer data (G-force readings for pothole detection)</li>
         </ul>
 
-        <h3>1.3 Device Information</h3>
+        <h3>1.3 Voice and Audio Data</h3>
+        <p>
+            When you use voice-guided features (optional), we process:
+        </p>
+        <ul>
+            <li>Voice commands for hands-free operation</li>
+            <li>Speech-to-text conversion for confirmations and lane selection</li>
+            <li>Microphone access (only when voice features are active)</li>
+            <li><strong>Note:</strong> Voice processing happens on-device; audio is not stored or transmitted</li>
+        </ul>
+
+        <h3>1.4 Subscription Data</h3>
+        <p>
+            For users with active subscriptions (Live Activities):
+        </p>
+        <ul>
+            <li>Subscription status and product ID</li>
+            <li>Purchase receipts (verified via StoreKit)</li>
+            <li>Subscription renewal and expiration dates</li>
+            <li>Transaction identifiers</li>
+        </ul>
+
+        <h3>1.5 Device Information</h3>
         <p>
             We collect basic device information:
         </p>
@@ -73,9 +95,10 @@
             <li>App version number</li>
             <li>Unique device identifiers for crash reporting</li>
             <li>Language and region settings</li>
+            <li>Vehicle type and phone mount position (for detection calibration)</li>
         </ul>
 
-        <h3>1.4 Usage Data</h3>
+        <h3>1.6 Usage Data</h3>
         <p>
             We collect anonymous usage statistics:
         </p>
@@ -93,12 +116,17 @@
             We use the collected information for the following purposes:
         </p>
         <ul>
+            <li><strong>Automatic Detection:</strong> Monitor accelerometer data to detect potholes in real-time while driving</li>
+            <li><strong>False Positive Filtering:</strong> Learn from dismissed detections to improve accuracy over time</li>
+            <li><strong>Voice Features:</strong> Enable hands-free reporting and confirmation for safer driving</li>
+            <li><strong>Live Activities:</strong> Display real-time pothole warnings on your lock screen during navigation</li>
             <li><strong>Service Delivery:</strong> Display hazards on the map, provide navigation, detect driving mode</li>
             <li><strong>Duplicate Prevention:</strong> Identify and merge duplicate reports within 5 meters</li>
             <li><strong>Map Enhancement:</strong> Generate heat maps and visualize road quality data</li>
             <li><strong>App Improvement:</strong> Analyze usage patterns, fix bugs, develop new features</li>
             <li><strong>Safety:</strong> Alert users to nearby hazards during navigation</li>
             <li><strong>Community Service:</strong> Share anonymized hazard data for public benefit</li>
+            <li><strong>Subscription Management:</strong> Verify active subscriptions for premium features</li>
         </ul>
         <div class="ascii-box">
             <p>
@@ -200,6 +228,28 @@
                 Denying location access will limit App functionality.
             </p>
         </div>
+
+        <h3>6.1 Motion & Fitness Permission</h3>
+        <p>
+            Required for automatic pothole detection:
+        </p>
+        <ul>
+            <li>Access to accelerometer data for G-force monitoring</li>
+            <li>Real-time motion detection at 50Hz sampling rate</li>
+            <li>No fitness or health data is collected</li>
+        </ul>
+
+        <h3>6.2 Microphone Permission (Optional)</h3>
+        <p>
+            Only required if you enable voice-guided features:
+        </p>
+        <ul>
+            <li>Hands-free voice commands and confirmations</li>
+            <li>Speech recognition for lane selection</li>
+            <li>All processing happens on-device</li>
+            <li>Voice data is never stored or transmitted to servers</li>
+            <li>Can be enabled/disabled in Settings at any time</li>
+        </ul>
     </section>
 
     <section class="section">
