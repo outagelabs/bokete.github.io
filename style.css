@@ -251,15 +251,142 @@ a:hover {
         height: 150px;
         box-shadow: 5px 5px 0px 0px #000000;
     }
+
     body {
         padding: 10px;
     }
 
     .ascii-logo {
-        font-size: 10px;
+        font-size: 8px;
+        padding: 10px;
+        overflow-x: auto;
+        box-shadow: 5px 5px 0px 0px #000000;
     }
 
     .ascii-art {
+        font-size: 10px;
+        overflow-x: auto;
+    }
+
+    h2 {
+        font-size: 16px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    .nav a {
+        margin: 5px 10px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .ascii-logo {
+        font-size: 6px;
+        padding: 8px;
+        box-shadow: 4px 4px 0px 0px #000000;
+    }
+
+    .ascii-art {
+        font-size: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 14px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    h3 {
+        font-size: 14px;
+    }
+
+    .app-icon-hero {
+        width: 120px;
+        height: 120px;
+        box-shadow: 4px 4px 0px 0px #000000;
+    }
+
+    .nav {
+        padding: 10px;
+    }
+
+    .nav a {
+        margin: 3px 8px;
+        font-size: 13px;
+    }
+
+    .preview-screenshot {
+        max-width: 220px;
+        box-shadow: 3px 3px 0px 0px #000000;
+    }
+
+    .button {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    ul, ol {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 375px) {
+    body {
+        padding: 5px;
+        font-size: 13px;
+    }
+
+    .ascii-logo {
+        font-size: 5px;
+        padding: 5px;
+        box-shadow: 3px 3px 0px 0px #000000;
+    }
+
+    .ascii-art {
+        font-size: 7px;
+    }
+
+    h1 {
+        font-size: 18px;
+    }
+
+    h2 {
+        font-size: 13px;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    h3 {
+        font-size: 13px;
+    }
+
+    .app-icon-hero {
+        width: 100px;
+        height: 100px;
+        box-shadow: 3px 3px 0px 0px #000000;
+    }
+
+    .nav a {
+        margin: 2px 5px;
         font-size: 12px;
+    }
+
+    .preview-screenshot {
+        max-width: 200px;
+    }
+
+    .button {
+        font-size: 13px;
+        padding: 6px 12px;
     }
 }
